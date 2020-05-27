@@ -1,0 +1,17 @@
+<div class='container'>
+  <div class='column justify-content-center'>
+    <h1> Restaurant list </h1>
+    <ul class="col-6">
+      <%  @restaurants.each do  |restaurant| %>
+        <%# if it is completed: true, tick box icon; else empty icon %>
+        <div class="restaurant-table">
+          <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+        </div>
+      <% end %>
+    </ul>
+
+    <%= link_to "Create New restaurant", new_restaurant_path, class:'btn btn-primary' %>
+  </div>
+</div>
+
+
